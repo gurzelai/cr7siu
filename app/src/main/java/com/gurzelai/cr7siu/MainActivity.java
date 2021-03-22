@@ -48,12 +48,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void recargar() {
+        imagen.setImageResource(getResources().getIdentifier("cr7" + numero++, "drawable", getPackageName()));
         if (!loop) {
             if (mp.isPlaying()) {
                 mp = MediaPlayer.create(getApplicationContext(), R.raw.cr7);
             }
         }
-        imagen.setImageResource(getResources().getIdentifier("cr7" + numero++, "drawable", getPackageName()));
         mp.start();
         if (numero == 19) numero = 1; // tenemos 18 imagenes asik poner 19
     }
@@ -70,5 +70,11 @@ public class MainActivity extends AppCompatActivity {
         super.onResume();
         pantallaCompleta();
         recargar();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        if(mp.isPlaying()) mp.pause();
     }
 }
