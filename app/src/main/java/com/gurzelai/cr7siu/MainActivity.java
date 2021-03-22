@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
         }
         imagen.setImageResource(getResources().getIdentifier("cr7" + numero++, "drawable", getPackageName()));
         mp.start();
-        if (numero == 10) numero = 1;
+        if (numero == 19) numero = 1; // tenemos 18 imagenes asik poner 19
     }
 
     private void pantallaCompleta() {
