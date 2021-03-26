@@ -16,8 +16,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@drawable/cr72"
-        android:contentDescription="@string/todo" />
+        tools:srcCompat="@drawable/cr72" />
 
 
     <androidx.appcompat.widget.SwitchCompat
@@ -35,8 +34,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:switchPadding="10sp"
-        android:layout_marginLeft="45dp"
-        android:layout_marginStart="45dp" />
+        android:layout_marginLeft="45dp" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/boton"
@@ -51,8 +49,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/ic_baseline_replay_24"
         tools:ignore="VectorDrawableCompat"
-        android:layout_marginEnd="25dp"
-        android:layout_marginRight="25dp" />
+        android:layout_marginEnd="25dp" />
 
     <TextView
         android:id="@+id/nombre"

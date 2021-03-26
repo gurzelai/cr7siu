@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="mensaje_dialogo">لقد كسرت اللعبة</string>
+    <string name="titulo_dialogo">لقد ضغطت على الزر عدة مرات</string>
+    <string name="loop">مرة أخرى</string>
+</resources>

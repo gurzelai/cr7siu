@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="mensaje_dialogo">YOU BROKE THE GAME</string>
+    <string name="titulo_dialogo">You have pressed the button too many times</string>
+    <string name="loop">Loop</string>
+
+</resources>

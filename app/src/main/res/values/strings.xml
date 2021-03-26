@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">CR7Siu</string>
+    <string name="mensaje_dialogo">HAS PETAO EL JUEGO</string>
+    <string name="titulo_dialogo">Has pulsado demasiadas veces el botón</string>
+    <string name="loop">Loop</string>
+    <string name="todo" translatable="false">TODO</string>
 </resources>

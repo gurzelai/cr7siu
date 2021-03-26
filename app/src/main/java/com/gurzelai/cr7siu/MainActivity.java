@@ -67,9 +67,9 @@ public class MainActivity extends AppCompatActivity {
 
     private void dialogo() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("HAS PETAO EL JUEGO");
+        builder.setTitle(R.string.titulo_dialogo);
         builder.setIcon(R.drawable.ic_baseline_error_24);
-        //builder.setMessage("Le has dado demasiadas veces");
+        builder.setMessage(R.string.mensaje_dialogo);
         builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
