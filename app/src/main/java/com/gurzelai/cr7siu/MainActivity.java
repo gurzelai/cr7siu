@@ -1,13 +1,18 @@
 package com.gurzelai.cr7siu;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SwitchCompat;
 
 import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.media.MediaPlayer;
+import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 
@@ -37,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 loop = !loop;
                 mp.setLooping(loop);
-                if(loop && !mp.isPlaying()){
+                if (loop && !mp.isPlaying()) {
                     mp.start();
                 }
             }
@@ -54,6 +59,26 @@ public class MainActivity extends AppCompatActivity {
         }
         mp.start();
         if (numero == 19) numero = 1; // tenemos 18 imagenes asik poner 19
+
+        if (!mp.isPlaying()) {
+            dialogo();
+        }
+    }
+
+    private void dialogo() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("HAS PETAO EL JUEGO");
+        builder.setIcon(R.drawable.ic_baseline_error_24);
+        //builder.setMessage("Le has dado demasiadas veces");
+        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                finish();
+            }
+        });
+        AlertDialog dialog = builder.create();
+        dialog.setCancelable(false);
+        dialog.show();
     }
 
     private void pantallaCompleta() {
@@ -62,6 +87,15 @@ public class MainActivity extends AppCompatActivity {
         View decorView = getWindow().getDecorView();
         int uiOptions = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY | View.SYSTEM_UI_FLAG_FULLSCREEN;
         decorView.setSystemUiVisibility(uiOptions);
+    }
+
+    @Override
+    public void finish() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            super.finishAndRemoveTask();
+        } else {
+            super.finish();
+        }
     }
 
     @Override
@@ -74,6 +108,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onPause() {
         super.onPause();
-        if(mp.isPlaying()) mp.pause();
+        if (mp.isPlaying()) mp.pause();
     }
 }
