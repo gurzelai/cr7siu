@@ -23,29 +23,33 @@
         android:id="@+id/loop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="25dp"
         android:layout_marginBottom="75dp"
+        android:checked="false"
         android:fontFamily="@font/permanent_marker"
         android:text="Loop"
         android:textColor="#FFFFFF"
         android:textColorHint="#FFFFFF"
+        android:textColorLink="#009688"
         android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:switchPadding="10sp" />
+        app:switchPadding="10sp"
+        android:layout_marginLeft="45dp" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/boton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="25dp"
-        android:layout_marginBottom="70dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginBottom="75dp"
         android:layout_weight="1"
         android:clickable="true"
         android:focusable="true"
+        app:backgroundTint="#009688"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@android:drawable/ic_menu_revert" />
+        app:srcCompat="@drawable/ic_baseline_replay_24"
+        tools:ignore="VectorDrawableCompat" />
 
     <TextView
         android:id="@+id/nombre"
